@@ -14,6 +14,8 @@
 ## dependencies
 
 - graphql-yoga
+- graphql-tools
+- merge-graphql-schemas
 - helmet
 - morgan
 - cors
