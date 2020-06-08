@@ -11,5 +11,5 @@ type Ride {
   distance: String!
   duration: String!
   createAt: String!
-  updateAt: String!
+  updateAt: String
 }
