@@ -5,11 +5,11 @@ import {
   BeforeInsert,
   BeforeUpdate,
   Column,
+  CreateDateColumn,
   Entity,
   ManyToOne,
   OneToMany,
   PrimaryGeneratedColumn,
-  CreateDateColumn,
   UpdateDateColumn,
 } from "typeorm";
 import Chat from "./Chat";
@@ -18,10 +18,10 @@ import Ride from "./Ride";
 import Verification from "./Verification";
 
 const BCRYPT_ROUNDS = 10;
+
 @Entity()
 class User extends BaseEntity {
-  @PrimaryGeneratedColumn()
-  id: number;
+  @PrimaryGeneratedColumn() id: number;
 
   @Column({ type: "text", nullable: true })
   @IsEmail()
@@ -87,11 +87,9 @@ class User extends BaseEntity {
   @OneToMany((type) => Ride, (ride) => ride.driver)
   ridesAsDriver: Ride[];
 
-  @CreateDateColumn()
-  createdAt: string;
+  @CreateDateColumn() createdAt: string;
 
-  @UpdateDateColumn()
-  updatedAt: string;
+  @UpdateDateColumn() updatedAt: string;
 
   get fullName(): string {
     return `${this.firstName} ${this.lastName}`;
@@ -105,8 +103,8 @@ class User extends BaseEntity {
   @BeforeUpdate()
   async savePassword(): Promise<void> {
     if (this.password) {
-      const hashPassword = await this.hashPassword(this.password);
-      this.password = hashPassword;
+      const hashedPassword = await this.hashPassword(this.password);
+      this.password = hashedPassword;
     }
   }
 
