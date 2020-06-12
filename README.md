@@ -13,7 +13,7 @@
 ### Authentication:
 
 - [x] Generate JWT
-- [ ] Verifiy JWT
+- [x] Verifiy JWT
 
 ### Private Resolvers:
 
