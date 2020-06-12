@@ -17,7 +17,7 @@
 
 ### Private Resolvers:
 
-- [ ] Get my Profile
+- [x] Get my Profile
 - [ ] Request Email Verification
 - [ ] Complete Email Verification
 - [ ] Update my Profile
