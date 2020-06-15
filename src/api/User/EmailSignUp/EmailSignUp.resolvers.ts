@@ -3,7 +3,7 @@ import Verification from "../../../entities/Verification";
 import { EmailSignUpMutationArgs, EmailSignUpResponse } from "src/types/graph";
 import User from "../../../entities/User";
 import createJWT from "../../../utils/createJWT";
-import { sendVerificationEmail } from "src/utils/sendEmail";
+import { sendVerificationEmail } from "../../../utils/sendEmail";
 
 const resolvers: Resolvers = {
   Mutation: {
@@ -31,7 +31,7 @@ const resolvers: Resolvers = {
               const emailVerification = await Verification.create({
                 payload: newUser.email,
                 target: "EMAIL",
-              });
+              }).save();
               await sendVerificationEmail(
                 newUser.fullName,
                 emailVerification.key

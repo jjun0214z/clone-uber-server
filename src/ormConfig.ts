@@ -2,7 +2,7 @@ import { ConnectionOptions } from "typeorm";
 
 const ConnectionOptions: ConnectionOptions = {
   type: "postgres",
-  database: "clone-uber",
+  database: "postgres",
   synchronize: true,
   logging: true,
   entities: ["entities/**/*.*"],
