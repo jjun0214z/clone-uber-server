@@ -2,7 +2,7 @@ import Mailgun from "mailgun-js";
 
 const mailGunClient = new Mailgun({
   apiKey: process.env.MAILGUN_API_KEY || "",
-  domain: process.env.MAILGUN_DOMAIN || "",
+  domain: "sandbox04c05a6a53cb4c7f8e2d8986b8eb71b8.mailgun.org" || "",
 });
 
 const sendEmail = (subject: string, html: string) => {

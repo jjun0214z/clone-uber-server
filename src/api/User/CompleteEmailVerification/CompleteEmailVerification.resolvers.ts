@@ -1,11 +1,11 @@
-import User from "src/entities/User";
+import User from "../../../entities/User";
 import {
   CompleteEmailVerificationResponse,
   CompleteEmailVerificationMutationArgs,
 } from "src/types/graph";
 import { Resolvers } from "src/types/resolvers";
-import privateResolver from "src/utils/privateResolver";
-import Verification from "src/entities/Verification";
+import privateResolver from "../../../utils/privateResolver";
+import Verification from "../../../entities/Verification";
 
 const resolvers: Resolvers = {
   Mutation: {
