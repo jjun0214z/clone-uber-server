@@ -1,6 +1,6 @@
 import User from "src/entities/User";
 import { Resolvers } from "src/types/resolvers";
-import privateResolver from "src/utils/privateResolver";
+import privateResolver from "../../../utils/privateResolver";
 import { ToggleDrivingModeResponse } from "src/types/graph";
 
 const resolvers: Resolvers = {
